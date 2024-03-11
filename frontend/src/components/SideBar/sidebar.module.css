@@ -1,0 +1,30 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #70c737;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 10px ;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul li {
+  display: block;
+  text-decoration: none;
+  color: #4caf13;
+}
+
+.sidebar ul li:hover {
+  background-color: #70c737;  
+  color: white;
+  cursor: pointer; 
+  border-radius: 0.4rem;
+}

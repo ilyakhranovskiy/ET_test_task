@@ -1,0 +1,58 @@
+.list {
+  border: 2px solid #70c737;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  gap: 2rem;
+}
+
+.image {
+  object-fit: cover;
+  height: 14.5rem;
+}
+
+.content {
+  margin-top: 0.3rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  height: 7rem;
+}
+
+.favorite {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+}
+
+.favorite.not {
+  color: rgb(180, 180, 180);
+}
+
+.price {
+  position: absolute;
+  bottom: 0;
+  left: 0.9rem;
+  background-color: white;
+  padding: 0.3rem 100% 0 0;
+  color: #414141;
+  margin-top: 0.7rem;
+  font-size: 1.1rem;
+}
+button {
+  color: white;
+  background-color: #70c737;
+  border: none;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
