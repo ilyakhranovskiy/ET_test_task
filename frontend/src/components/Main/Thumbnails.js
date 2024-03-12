@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./thumbnails.module.css";
 
-export default function Thumbnails({ drugs }) {
+export default function Thumbnails({ drugs, addToCart }) {
+  
   return (
     <ul className={classes.list}>
       {drugs.map((drug) => (
@@ -21,8 +22,8 @@ export default function Thumbnails({ drugs }) {
               ❤
             </span>
             <div>{drug.price}</div>
-            <button>Add to Cart</button>
           </div>
+          <button onClick={()=>addToCart(drug)}>Add to Cart</button>
         </li>
       ))}
     </ul>

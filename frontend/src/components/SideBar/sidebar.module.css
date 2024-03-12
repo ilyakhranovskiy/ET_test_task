@@ -6,23 +6,16 @@
   margin: 1rem;
   border-radius: 1rem;
 }
-.sidebar ul {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-.sidebar ul li {
+.sidebar a{
   padding: 10px ;
   margin-bottom: 1rem;
-}
-
-.sidebar ul li {
   display: block;
   text-decoration: none;
   color: #4caf13;
 }
 
-.sidebar ul li:hover {
+
+.sidebar a:hover {
   background-color: #70c737;  
   color: white;
   cursor: pointer; 
