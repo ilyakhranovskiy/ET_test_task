@@ -8,7 +8,7 @@ export default function CartPage() {
   
   return (
     <>
-      {cart && cart.items.length > 0 && (
+      {cart.items.length === 0 ?("Cart Page Is Empty") : (
         <div className={classes.container}>
           <ul className={classes.list}>
             {cart.items.map((item) => (
