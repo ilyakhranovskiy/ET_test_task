@@ -59,3 +59,41 @@ export const sample_shops = [
   { name: "Pharmacy One" },
   { name: "HealthPlus" },
 ];
+
+export const sample_users = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john.doe@example.com",
+    password: "password123",
+    address: "123 Main St, City, Country",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "jane.smith@example.com",
+    password: "qwerty456",
+    address: "456 Elm St, Town, Country",
+  },
+  {
+    id: 3,
+    name: "Alice Johnson",
+    email: "alice.johnson@example.com",
+    password: "pass123",
+    address: "789 Oak St, Village, Country",
+  },
+  {
+    id: 4,
+    name: "Bob Williams",
+    email: "bob.williams@example.com",
+    password: "password789",
+    address: "1011 Pine St, Hamlet, Country",
+  },
+  {
+    id: 5,
+    name: "Emily Brown",
+    email: "emily.brown@example.com",
+    password: "letmein",
+    address: "1213 Cedar St, Suburb, Country",
+  },
+];
