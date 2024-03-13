@@ -63,7 +63,7 @@ export default function CartPage() {
                 {cart.totalPrice.toFixed(2)}
               </div>
             </div>
-            <Link to="/checkout">Submit</Link>
+            <Link to="/checkout">Proceed to checkout</Link>
           </div>
         </div>
       )}
