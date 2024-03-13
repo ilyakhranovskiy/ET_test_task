@@ -18,4 +18,5 @@ router.get("/shop/:searchTerm", (req, res) => {
   );
   res.send(drugs)
 });
+
 export default router;

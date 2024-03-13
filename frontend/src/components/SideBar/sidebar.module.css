@@ -6,18 +6,23 @@
   margin: 1rem;
   border-radius: 1rem;
 }
-.sidebar a{
-  padding: 10px ;
+.sidebar a {
+  padding: 10px;
   margin-bottom: 1rem;
   display: block;
   text-decoration: none;
   color: #4caf13;
 }
 
-
 .sidebar a:hover {
-  background-color: #70c737;  
+  background-color: #70c737;
   color: white;
-  cursor: pointer; 
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+.sidebar a:focus {
+  background-color: #70c737;
+  color: white;
+  cursor: pointer;
   border-radius: 0.4rem;
 }
