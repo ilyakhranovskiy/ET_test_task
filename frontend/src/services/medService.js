@@ -1,15 +1,16 @@
-import { sample_med, sample_shops } from "../data";
+import axios from "axios";
 
-export const getAll = async () => sample_med;
+export const getAll = async () => {
+  const { data } = await axios.get("/api/drugs");
+  return data;
+};
 
-export const search = async (searchTerm) =>
-  sample_med.filter((item) =>
-    item.shops.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+export const search = async (searchTerm) => {
+  const { data } = await axios.get("/api/drugs/shop/" + searchTerm);
+  return data;
+};
 
-export const getAllShops = async () => sample_shops;
-
-// export const getAllByShop = async (shop) => {
-// //   if (shop === "All") return getAll();
-//   return sample_shops.filter((item) => item.name?.includes(shop));
-// };
+export const getAllShops = async () => {
+  const { data } = await axios.get("/api/drugs/shops");
+  return data;
+};

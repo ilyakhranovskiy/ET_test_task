@@ -1,8 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { sample_med } from "../data";
 
 const CartContext = createContext(null);
-const CART_KEY = 'cart';
+const CART_KEY = "cart";
 const EMPTY_CART = {
   items: [],
   totalPrice: 0,
@@ -17,8 +16,8 @@ export default function CartProvider({ children }) {
   const [totalCount, setTotalCount] = useState(initCart.totalCount);
 
   useEffect(() => {
-    const totalPrice = sum(cartItems.map(item => item.price));
-    const totalCount = sum(cartItems.map(item => item.quantity));
+    const totalPrice = sum(cartItems.map((item) => item.price));
+    const totalCount = sum(cartItems.map((item) => item.quantity));
     setTotalPrice(totalPrice);
     setTotalCount(totalCount);
 
@@ -41,7 +40,7 @@ export default function CartProvider({ children }) {
       return EMPTY_CART;
     }
   }
-  
+
   const sum = (items) => {
     return items.reduce((prevValue, curValue) => prevValue + curValue, 0);
   };
