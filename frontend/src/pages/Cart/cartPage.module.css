@@ -93,7 +93,7 @@
   margin-bottom: 1.5rem;
 }
 
-.checkout .foods_count::before {
+.checkout .drugs_count::before {
   content: "Count: ";
   color: grey;
 }

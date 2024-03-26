@@ -1,7 +1,6 @@
 import { Router } from "express";
 import jwt from "jsonwebtoken";
 const router = Router();
-import { BAD_REQUEST } from "../constants/httpStatus.js";
 import handler from "express-async-handler";
 import { UserModel } from "../models/user.model.js";
 import bcrypt from "bcryptjs";
@@ -29,11 +28,6 @@ router.post(
     const { name, email, password, address } = req.body;
 
     const user = await UserModel.findOne({ email });
-
-    if (user) {
-      res.status(BAD_REQUEST).send("User already exists, please login!");
-      return;
-    }
 
     const hashedPassword = await bcrypt.hash(
       password,

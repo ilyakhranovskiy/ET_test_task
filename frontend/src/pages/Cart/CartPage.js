@@ -58,7 +58,7 @@ export default function CartPage() {
 
           <div className={classes.checkout}>
             <div>
-              <div className={classes.foods_count}>{cart.totalCount}</div>
+              <div className={classes.drugs_count}>{cart.totalCount}</div>
               <div className={classes.total_price}>
                 {cart.totalPrice.toFixed(2)}
               </div>

@@ -9,9 +9,11 @@ const PASSWORD_HASH_SALT_ROUNDS = 10;
 
 set("strictQuery", true);
 
+const URI="mongodb://localhost:27017/drugStore-db"
+
 export const dbconnect = async () => {
   try {
-    connect(process.env.MONGO_URI, {
+    connect(URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -22,6 +24,7 @@ export const dbconnect = async () => {
     console.log(error);
   }
 };
+
 
 async function seedUsers() {
   const usersCount = await UserModel.countDocuments();
