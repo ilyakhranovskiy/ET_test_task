@@ -14,11 +14,12 @@ router.post(
     const user = await UserModel.findOne({ email });
 
     if (user && (await bcrypt.compare(password, user.password))) {
-      res.send(generateTokenResponse(user));
+      const tokenResponse = generateTokenResponse(user);
+      res.json(tokenResponse);
       return;
     }
 
-    res.status(BAD_REQUEST).send("Username or password is invalid");
+    res.status(400).send("Username or password is invalid");
   })
 );
 
@@ -44,14 +45,15 @@ router.post(
     const result = await UserModel.create(newUser);
     res.send(generateTokenResponse(result));
   })
-); 
+);
 
 const generateTokenResponse = (user) => {
+  const { id, email, name, address, isAdmin } = user;
   const token = jwt.sign(
     {
-      id: user.id,
-      email: user.email,
-      isAdmin: user.isAdmin,
+      id,
+      email,
+      isAdmin,
     },
     process.env.JWT_SECRET,
     {
@@ -60,11 +62,11 @@ const generateTokenResponse = (user) => {
   );
 
   return {
-    id: user.id,
-    email: user.email,
-    name: user.name,
-    address: user.address,
-    isAdmin: user.isAdmin,
+    id,
+    email,
+    name,
+    address,
+    isAdmin,
     token,
   };
 };
